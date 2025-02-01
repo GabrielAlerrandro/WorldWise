@@ -15,14 +15,12 @@ const formatDate = (date) =>
 
 function City() {
   const { id } = useParams()
-  const [searchParams, setSearchParams] = useSearchParams()
-  const lat = searchParams.get("lat")
-  const lng = searchParams.get("lng")
+  const [searchParams] = useSearchParams()
   const { getCity, currentCity, isLoading } = useCities()
 
   useEffect(() => {
     getCity(id)
-  }, [id])
+  }, [id, getCity])
 
   const { cityName, emoji, date, notes } = currentCity
   if (isLoading) return <Spinner />
