@@ -5,8 +5,8 @@ import {
   useEffect,
   useReducer,
 } from "react"
+import { BASEURL } from "../utils/key"
 
-const BASEURL = "https://db-six-virid.vercel.app/"
 const CitiesContext = createContext()
 
 function CitiesProvider({ children }) {
