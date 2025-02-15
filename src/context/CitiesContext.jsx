@@ -6,10 +6,9 @@ import {
   useReducer,
 } from "react"
 
-const BASEURL = "http://localhost:8000"
+const BASEURL = "https://db-six-virid.vercel.app/"
 const CitiesContext = createContext()
 
-// eslint-disable-next-line react/prop-types
 function CitiesProvider({ children }) {
   const initialState = {
     cities: [],
